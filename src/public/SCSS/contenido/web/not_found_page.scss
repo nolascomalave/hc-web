@@ -1,0 +1,109 @@
+@use '../../librerias/global_vars' as var;
+
+body{
+	font-size: 1.25vw;
+	background-image: url('/IMG/fondos/fondo-textura.png');
+	background-attachment: fixed;
+}
+
+.not-found-message{
+	position: fixed;
+	overflow-y: auto;
+
+
+	.container{
+		width: 40%;
+		padding: 1em;
+		text-align: center;
+		color: white;
+		text-shadow: 0 0 .1em black,
+		0 0 .2em black,
+		0 0 .3em black;
+
+		h1{
+			margin-bottom: .1em;
+			font-size: 7em;
+			color: var.$purple;
+			letter-spacing: .03em;
+			text-shadow: .005em .005em  white,
+			.01em .01em  white,
+			.015em .015em  white,
+			.02em .02em  white,
+			.025em .025em  white,
+			.03em .03em  white,
+			.035em .035em  white,
+			.04em .04em  white,
+			.045em .045em  white,
+			.05em .05em  white,
+			.055em .055em  white,
+			.06em .06em  white,
+			.06em .06em .05em black;
+		}
+
+		i{
+			text-decoration: underline;
+		}
+
+		.buttons-container{
+			margin-top: 2em;
+
+			a{
+				display: inline-block;
+				padding: .75em 1.5em;
+				color: white;
+				text-decoration: none;
+				border-radius: .25em;
+				outline: none;
+				box-shadow: .1em .1em 0 white,
+				.2em .2em 0 white,
+				.3em .3em 0 white,
+				.3em .3em .1em black;
+				background: var.$purple;
+				transition: 250ms;
+
+				&:hover, &:focus{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px){
+	body{
+		font-size: 12pt;
+	}
+
+	.not-found-message .container{
+		width: 480px;
+		max-width: 100%;
+	}
+}/*
+
+@media screen and (max-width: 500px){
+	body{
+		background-position: bottom;
+		background-color: #11857d;
+	}
+}*/
+
+@media screen and (max-width: 350px){
+	.not-found-message .container .buttons-container{
+		display: block;
+
+		a{
+			margin: auto;
+			margin-bottom: 1.5em;
+
+			&:last-child{
+				margin: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 250px){
+	body{
+		font-size: 6.38vw;
+	}
+}

@@ -1,0 +1,82 @@
+body {
+  font-size: 1.25vw;
+  background-image: url("/IMG/fondos/fondo-textura.png");
+  background-attachment: fixed;
+}
+
+.not-found-message {
+  position: fixed;
+  overflow-y: auto;
+}
+.not-found-message .container {
+  width: 40%;
+  padding: 1em;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 0.1em black, 0 0 0.2em black, 0 0 0.3em black;
+}
+.not-found-message .container h1 {
+  margin-bottom: 0.1em;
+  font-size: 7em;
+  color: #790c86;
+  letter-spacing: 0.03em;
+  text-shadow: 0.005em 0.005em white, 0.01em 0.01em white, 0.015em 0.015em white, 0.02em 0.02em white, 0.025em 0.025em white, 0.03em 0.03em white, 0.035em 0.035em white, 0.04em 0.04em white, 0.045em 0.045em white, 0.05em 0.05em white, 0.055em 0.055em white, 0.06em 0.06em white, 0.06em 0.06em 0.05em black;
+}
+.not-found-message .container i {
+  text-decoration: underline;
+}
+.not-found-message .container .buttons-container {
+  margin-top: 2em;
+}
+.not-found-message .container .buttons-container a {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.25em;
+  outline: none;
+  box-shadow: 0.1em 0.1em 0 white, 0.2em 0.2em 0 white, 0.3em 0.3em 0 white, 0.3em 0.3em 0.1em black;
+  background: #790c86;
+  transition: 250ms;
+}
+.not-found-message .container .buttons-container a:hover, .not-found-message .container .buttons-container a:focus {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 12pt;
+  }
+
+  .not-found-message .container {
+    width: 480px;
+    max-width: 100%;
+  }
+}
+/*
+
+@media screen and (max-width: 500px){
+	body{
+		background-position: bottom;
+		background-color: #11857d;
+	}
+}*/
+@media screen and (max-width: 350px) {
+  .not-found-message .container .buttons-container {
+    display: block;
+  }
+  .not-found-message .container .buttons-container a {
+    margin: auto;
+    margin-bottom: 1.5em;
+  }
+  .not-found-message .container .buttons-container a:last-child {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 250px) {
+  body {
+    font-size: 6.38vw;
+  }
+}
+
+/*# sourceMappingURL=not_found_page.css.map */

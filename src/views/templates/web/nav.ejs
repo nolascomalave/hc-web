@@ -1,0 +1,108 @@
+<button id="menu-button" title="Menú de navegación">
+	<i class="fa fa-bars"></i>
+</button>
+
+<% if(path=='/'){ %>
+	<nav id="nav" class="allScreen bettwenFlex">
+<% }else{ %>
+	<nav id="nav" class="allScreen bettwenFlex dark-nav">
+<% } %>
+
+	<% if(path=='/') { %>
+		<a class="home-link" title="Página principal">
+	<% }else{ %>
+		<a href="/" class="home-link" title="Página principal">
+	<% } %>
+		<img src="/IMG/logos/logo_sombreado.png">
+	</a>
+
+	<ul id="nav-list" class="options endFlex">
+		<div class="header bettwenFlex">
+			Menú de enlaces
+			<button class="close" title="Cerrar">
+				<i class="fa fa-times"></i>
+			</button>
+		</div>
+		<% if(path=='/') { %>
+			<li class="li-item">
+				<button id="us-section" class="option go">
+					NOSOTROS
+				</button>
+			</li>
+			<li class="li-item">
+				<button id="ofertas-section" class="option go">
+					OFERTAS
+				</button>
+			</li>
+			<li class="li-item">
+				<button id="planes-section" class="option go">
+					PLANES
+				</button>
+			</li>
+			<li class="li-item">
+				<button id="portafolio-section" class="option go">
+					PORTAFOLIO
+				</button>
+			</li>
+			<li class="li-item">
+				<button id="contacto-section" class="option go">
+					CONTACTO
+				</button>
+			</li>
+		<% }else{ %>
+			<li class="li-item">
+				<a href="/#us" class="option">
+					NOSOTROS
+				</a>
+			</li>
+			<li class="li-item">
+				<a href="/#ofertas" class="option">
+					OFERTAS
+				</a>
+			</li>
+			<li class="li-item">
+				<a href="/#planes" class="option">
+					PLANES
+				</a>
+			</li>
+			<li class="li-item">
+				<a href="/#portafolio" class="option">
+					PORTAFOLIO
+				</a>
+			</li>
+			<li class="li-item">
+				<a href="/#contacto" class="option">
+					CONTACTO
+				</a>
+			</li>
+		<% } %>
+
+		<% if(path!='/ayuda' && path!='/ayuda/') { %>
+			<li class="li-item">
+				<div class="drop-options">
+					<button class="option drop-button">
+						AYUDA <i class="fas fa-angle-down"></i>
+					</button>
+
+					<ul class="drop-list">
+						<li class="drop-item">
+							<a href="/preguntas-frecuentes/">Preguntas Frecuentes</a>
+						</li>
+						<!-- <li class="drop-item">
+							<button>Misión</button>
+						</li> -->
+					</ul>
+				</div>
+			</li>
+		<% } %>
+
+		<% if(usuario!=null) { %>
+		<% }else{ %>
+			<!-- <li class="li-item special-li go">
+				<a class="special">
+					INICIAR SESIÓN
+				</a>
+			</li> -->
+		<% } %>
+	</ul>
+</nav>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript" src="/JS/librerias/JQuery/jquery.js"></script>
+	<script type="text/javascript" src="/JS/librerias/global_class.js"></script>
+	<script type="text/javascript" src="/JS/librerias/global_functions.js"></script>
+	<script type="text/javascript" src="/JS/librerias/web.js"></script>
+	<script type="text/javascript" src="JS/contenido/web/landing.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/CSS/librerias/fontawesome/styles/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/CSS/librerias/global.css">
+	<link rel="stylesheet" type="text/css" href="/CSS/librerias/web.css">
+	<link rel="stylesheet" type="text/css" href="/CSS/contenido/web/landing.css">
+	<link rel="icon" type="image/gif" href="/IMG/logos/logo.png">
+
+	<title>Hi Connection</title>
+</head>
+<body>
+
+	<!-- Inclusión del preloader de la página ---------------------------------------------------------------------------------------->
+	<%- include("../../templates/web/loader") %>
+	<!-- ----------------------------------------- ----------------------------------------------------------------------------------->
+
+	<!-- Inclusión de la plantilla de navegación ------------------------------------------------------------------------------------->
+	<%- include("../../templates/web/nav", {usuario, path}) %>
+	<!-- ----------------------------------------- ----------------------------------------------------------------------------------->
+
+	<header id="header">
+		<div class="container">
+			<aside class="centerFlex">
+				<img src="/IMG/logos/logo_sombreado.png">
+				<div class="texto centerFlex truncado">
+					SOMOS TECNOLOGÍA
+				</div>
+
+				<div class="borde"></div>
+
+				<div class="socials centerFlex">
+					<a href="https://facebook.com" target="_blank" class="enlace">
+						<i class="fab fa-facebook"></i>
+					</a>
+					<a href="https://instagram.com" target="_blank" class="enlace">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="https://whatsapp.com" target="_blank" class="enlace">
+						<i class="fab fa-whatsapp"></i>
+					</a>
+				</div>
+			</aside>
+
+			<section>
+				<div class="slider allScreen">
+					<div class="contenedor startFlex">
+						<img class="slide" src="/IMG/portada/portada1.jpg">
+						<img class="slide" src="/IMG/portada/portada-antenna.jpg">
+						<img class="slide" src="/IMG/portada/portada-mp.jpg">
+						<img class="slide" src="/IMG/portada/portada-netflix.jpg">
+					</div>
+				</div>
+				<div class="contenedor startFlex">
+					<div>
+						<h1><b>Mantente conectado a través de nuestro servicio de internet</b></h1>
+						<p class="promocion">
+							Internet de hasta 100 Mega Bytes <span class="hi">400$</span> la instalación y el primer mes gratis.
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</header>
+
+	<section id="categories">
+		<div class="title">
+			<p class="small">NUESTROS</p>
+			<h1>TIPOS DE SERVICIOS</h1>
+			<p>
+				Tenemos un equipo de profesionales altamente capacitados para realizar las tareas que quieras que ejecutemos en los siguientes ámbitos:
+			</p>
+		</div>
+
+		<div class="height-long-card-content">
+			<figure class="height-long-card" style="background-image: url('/IMG/service-netflix.jpg');">
+				<img src="/IMG/service-netflix.jpg">
+				<figcaption class="allScreen bettwenFlex">
+					<p class="principal-text">
+						INTERNET
+					</p>
+
+					<div class="vertical-text bettwenFlex">
+						<p class="truncado">
+							CONEXIÓN A LA RED MÁS GRANDE
+						</p>
+
+						<a href="">
+							Ir
+						</a>
+					</div>
+				</figcaption>
+			</figure>
+
+			<figure id="prueba-long" class="height-long-card" style="background-image: url('/IMG/Web-developer1.jpg');">
+				<img src="/IMG/Web-developer1.jpg">
+				<figcaption class="allScreen bettwenFlex">
+					<p class="principal-text">
+						DESARROLLO DE SOFTWARE 1
+					</p>
+
+					<div class="vertical-text bettwenFlex">
+						<p class="truncado">
+							DESARROLLO DE APLICACIONES WEB
+						</p>
+
+						<a href="">
+							Ir
+						</a>
+					</div>
+				</figcaption>
+			</figure>
+
+			<figure class="height-long-card" style="background-image: url('/IMG/02.jpg');">
+				<img src="/IMG/02.jpg">
+				<figcaption class="allScreen bettwenFlex">
+					<p class="principal-text">
+						INSTALACIÓN DE EQUIPOS
+					</p>
+
+					<div class="vertical-text bettwenFlex">
+						<p class="truncado">
+							LOS MEJORES EN EL CAMPO
+						</p>
+
+						<a href="">
+							Ir
+						</a>
+					</div>
+				</figcaption>
+			</figure>
+
+			<button class="height-long-card-controll prev inactiveButton">
+				<i class="fa fa-arrow-left"></i> PREV
+			</button>
+
+			<button class="height-long-card-controll next">
+				NEXT <i class="fa fa-arrow-right"></i>
+			</button>
+		</div>
+	</section>
+
+	<section id="us">
+		<div class="container">
+			<div class="img"></div>
+			<div class="contenido">
+				<div class="contenedor">
+					<h1>LO QUE SOMOS</h1>
+
+					<p class="text">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+
+					<div class="numbers">
+						<div class="number-card">
+							<h1>60</h1>
+							<p>Clientes Activos</p>
+						</div>
+
+						<div class="number-card">
+							<h1>3</h1>
+							<p>Torres de Control</p>
+						</div>
+
+						<!-- <div class="number-card">
+							<h1>250</h1>
+							<p>Antenas en el País</p>
+						</div> -->
+					</div>
+
+					<div class="endFlex">
+						<a class="more-button centerFlex" href="/nosotros/">
+							<span>Sepa más</span>
+							<i class="fa fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="ofertas">
+		<div class="container">
+			<div class="description centerFlex relative">
+				<p>Si ves nuestras ofertas te enamorarás de nosotros.</p>
+			</div>
+
+			<fieldset class="oferta active">
+				<legend><img src="/IMG/iconos/email.svg"></legend>
+				<b class="title">
+					50% de descuento por el plan básico
+				</b>
+				<p>
+					Puedes pagar al mes solo el 50% de lo que valdría tu plan básico, es decir, tendrás una velocidad de 3 megabytes por segundo a mitad de precio.
+				</p>
+				<!-- <div class="endFlex">
+					<a href=""></a>
+				</div> -->
+			</fieldset>
+
+			<fieldset class="oferta">
+				<legend><i class="fa fa-times"></i></legend>
+				<b class="title">
+					50% de descuento por el plan básico
+				</b>
+				<p>
+					Puedes pagar al mes solo el 50% de lo que valdría tu plan básico, es decir, tendrás una velocidad de 3 megabytes por segundo a mitad de precio.
+				</p>
+				<!-- <div class="endFlex">
+					<a href=""></a>
+				</div> -->
+			</fieldset>
+
+			<fieldset class="oferta">
+				<legend><img src="/IMG/iconos/email.svg"></legend>
+				<b class="title">
+					50% de descuento por el plan básico
+				</b>
+				<p>
+					Puedes pagar al mes solo el 50% de lo que valdría tu plan básico, es decir, tendrás una velocidad de 3 megabytes por segundo a mitad de precio.
+				</p>
+				<!-- <div class="endFlex">
+					<a href=""></a>
+				</div> -->
+			</fieldset>
+		</div>
+		<div class="border"></div>
+	</section>
+
+	<section id="planes">
+		<div class="global-title">
+			<p><b>NUESTROS PLANES</b></p>
+
+			Echa un vistazo a los planes que ofrecemos para que te mantengas conectado.
+		</div>
+
+		<% if(data.planes.errno){ %>
+			<div class="data-message get-data-error">
+				<p>¡Opps! Ha ocurrido un error al obtener los datos.</p>
+				<center>
+					<img src="/IMG/iconos/not-found.svg">
+				</center>
+			</div>
+		<% }else if(data.planes.length>0){ %>
+			<div class="container">
+				<% data.planes.forEach(el =>{ %>
+					<div class="plan relative">
+						<div class="contenedor relative">
+							<div class="contenido">
+								<!--<b class="type"><%- el.category %></b>-->
+								<p class="title">
+									<%- el.name %>
+								</p>
+
+								<p class="text">
+									<%- el.description %>
+								</p>
+							</div>
+
+							<div class="caja allScreen"></div>
+							<ul class="caja allScreen">
+								<p class="title">
+									Lo que ofrece
+								</p>
+								<% el.features.forEach(feature=>{ %>
+									<li>
+										<%- feature %>
+									</li>
+								<% }); %>
+
+								<div class="centerFlex">
+									<a href="/planes/<%- el.id %>" target="_blank" class="solicite-button clicker" title="Solicitar">Solicitar Plan</a>
+								</div>
+							</ul>
+						</div>
+
+						<center>
+							<img src="<%- el.img %>">
+						</center>
+					</div>
+				<% }); %>
+
+				<!-- <div class="plan relative">
+					<div class="contenedor relative">
+						<div class="contenido">
+							<b class="type">TYPE</b>
+							<p class="title">
+								Título del plan
+							</p>
+
+							<p class="text">
+								Éste plan ofrece valiosos servicios que te encantarán, igualmente a tu familia. De verdad lo amarás.
+							</p>
+						</div>
+
+						<div class="caja allScreen"></div>
+						<ul class="caja allScreen">
+							<p class="title">
+								Lo que ofrece
+							</p>
+							<li>
+								Lo que nos gusta
+							</li>
+							<li>
+								Lo que nos gusta
+							</li>
+
+							<div class="centerFlex">
+								<a href="/solicitar-plan/" class="solicite-button clicker" title="Solicitar">Solicitar Plan</a>
+							</div>
+						</ul>
+					</div>
+
+					<center>
+						<img src="/IMG/iconos/icono_ejemplo.png">
+					</center>
+				</div> -->
+			</div>
+		<% }else{ %>
+			<div class="data-message empty-data">
+				<p>Por ahora no hay planes disponibles.</p>
+				<center>
+					<img src="/IMG/iconos/empty-data.svg">
+				</center>
+			</div>
+		<% } %>
+		<center>
+			<button type="button" id="more-planes" class="clicker">Ver más</button>
+		</center>
+	</section>
+
+	<% if(data.proyects.errno){ %>
+		<!-- <div class="data-message get-data-error">
+			<p>¡Opps! Ha ocurrido un error al obtener los datos.</p>
+			<center>
+				<img src="/IMG/iconos/not-found.svg">
+			</center>
+		</div> -->
+	<% }else if(data.proyects.length>0){ %>
+		<section id="portafolio">
+			<div class="encabezado">
+				<h1><span>NUESTRO TRABAJO</span></h1>
+				<p>Echa un vistazo a nuestros fabulosos trabajos. Esos trabajos que hacemos para ti. No dejes de verlos, ya que será lo mejor que verás para motivarte a ser nuestro cliente.</p>
+			</div>
+
+			<div class="media-player relative">
+				<div class="galery relative">
+					<div class="screen relative centerFlex">
+						<% data.proyects[0].media.forEach(el => { %>
+							<% if(el.type==='image'){ %>
+								<img src="<%- el.src %>" class="media"/>
+							<% }else if(el.type==='video'){ %>
+								<video src="<%- el.src %>" class="media" controls></video>
+							<% } %>
+						<% }); %>
+					</div>
+
+					<button class="open" title="Abrir selector de proyectos">
+						<i class="fa fa-eye"></i>
+					</button>
+
+					<div class="active-img-selector footer bettwenFlex">
+						<button class="select-controll prev" title="Anterior">
+							<i class="fa fa-angle-left"></i>
+						</button>
+
+						<div class="media-items centerFlex">
+						</div>
+
+						<button class="select-controll next" title="Siguiente" >
+							<i class="fa fa-angle-right"></i>
+						</button>
+					</div>
+					<div class="second-loader allScreen">
+						<section class="centerFlex">
+							<div id="bars">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</section>
+					</div>
+				</div>
+				<div class="description startFlex allScreen">
+					<div class="box">
+						<div class="text">
+							<h1><%- data.proyects[0].title %></h1>
+							<p><%- data.proyects[0].description %></p>
+						</div>
+						<p class="date">Publicado el 10 de mayo de 2010</p>
+						<div class="proyect-indicator centerFlex">
+							<% data.proyects.forEach(el => { %>
+								<div class="indicator" proyect-refference='<%- el.id %>'></div>
+							<% }); %>
+						</div>
+						<div class="work-controls aroundFlex">
+							<button class="prev">
+								<i class="fa fa-angle-left"></i> <span>Anterior</span>
+							</button>
+							<button class="next" title="Siguiente Proyecto">
+								<span>Siguiente</span> <i class="fa fa-angle-right"></i>
+							</button>
+							<!-- <button class="prev" title="Proyecto Anterior">
+								<i class="fa fa-angle-left"></i>
+							</button>
+							<button class="next" title="Siguiente Proyecto">
+								<i class="fa fa-angle-right"></i>
+							</button> -->
+						</div>
+					</div>
+					<button class="close">
+						<i class="fa fa-times"></i>
+					</button>
+				</div>
+
+				<div class="proyect-loader second-loader allScreen">
+					<section class="centerFlex">
+						<div id="bars">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- <section id="portafolio">
+			<div class="encabezado">
+				<h1><span>NUESTRO TRABAJO</span></h1>
+				<p>Echa un vistazo a nuestros fabulosos trabajos. Esos trabajos que hacemos para ti. No dejes de verlos, ya que será lo mejor que verás para motivarte a ser nuestro cliente.</p>
+			</div>
+
+			<div class="media-player relative">
+				<div class="galery relative">
+					<div class="screen relative centerFlex">
+					</div>
+
+					<button class="open" title="Abrir selector de proyectos">
+						<i class="fa fa-eye"></i>
+					</button>
+
+					<div class="active-img-selector footer bettwenFlex">
+						<button class="select-controll prev" title="Anterior">
+							<i class="fa fa-angle-left"></i>
+						</button>
+
+						<div class="media-items centerFlex">
+						</div>
+
+						<button class="select-controll next" title="Siguiente" >
+							<i class="fa fa-angle-right"></i>
+						</button>
+					</div>
+					<div class="second-loader allScreen">
+						<section class="centerFlex">
+							<div id="bars">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<div class="load-1">
+								<div class="load-2 child">
+									<div class="load-3 child">
+										<div class="token"></div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+				<div class="description startFlex allScreen">
+					<div class="box">
+						<div class="text">
+							<h1>Instalación de antena en Bahía Posuelos</h1>
+							<p>Instalamos una antena súper genial en la casa de un panita bien pato que fuma marihuana con rockeros y transexuales.</p>
+						</div>
+						<p class="date">Publicado el 10 de mayo de 2010</p>
+						<div class="proyect-indicator centerFlex">
+						</div>
+						<div class="work-controls aroundFlex">
+							<button class="prev">
+								<i class="fa fa-angle-left"></i> <span>Anterior</span>
+							</button>
+							<button class="next" title="Siguiente Proyecto">
+								<span>Siguiente</span> <i class="fa fa-angle-right"></i>
+							</button>
+						</div>
+					</div>
+					<button class="close">
+						<i class="fa fa-times"></i>
+					</button>
+				</div>
+
+				<div class="proyect-loader second-loader allScreen">
+					<section class="centerFlex">
+						<div id="bars">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section> -->
+	<% }else{ %>
+		<!-- <div class="data-message empty-data">
+			<p>Por ahora no hay planes disponibles.</p>
+			<center>
+				<img src="/IMG/iconos/empty-data.svg">
+			</center>
+		</div> -->
+	<% } %>
+
+	<section id="contacto">
+		<div class="contenedor">
+			<h1 class="h1">
+				<span>CONTÁCTANOS</span>
+			</h1>
+
+			<div class="inline bettwenFlex">
+				<div class="formulario">
+					<form id="contact-form">
+						<div class="float-label">
+							<input type="text" id="nombre" minlength="5" maxlength="101" required>
+							<label for="nombre" class="inactive">Nombre y apellido <span class="obligatory">*</span></label>
+							<div class="borde">
+								<div></div>
+							</div>
+							<p id="nombreError" class="error"></p>
+						</div>
+						<div class="bettwenFlex">
+							<div class="float-label">
+								<input type="email" id="email" maxlength="132" required>
+								<label for="email" class="inactive">Correo Electrónico <span class="obligatory">*</span></label>
+								<div class="borde">
+									<div></div>
+								</div>
+								<p id="emailError" class="error"></p>
+							</div>
+
+							<div class="float-label">
+								<input type="tlf" id="telefono" required>
+								<label for="telefono" class="inactive">Número telefónico</label>
+								<div class="borde">
+									<div></div>
+								</div>
+								<p id="telefonoError" class="error"></p>
+							</div>
+						</div>
+
+						<div class="float-label">
+							<textarea id="mensaje" minlength="4" maxlength="1500"></textarea>
+							<label for="mensaje" class="inactive">Mensaje <span class="obligatory">*</span></label>
+							<div class="borde">
+								<div></div>
+							</div>
+							<p id="emailError" class="error"></p>
+						</div>
+
+						<div class="endFlex">
+							<button type="submit" title="Enviar">
+								Enviar
+							</button>
+						</div>
+					</form>
+				</div>
+
+				<div class="info">
+					<h1>Información</h1>
+					
+					<div class="container">
+						<figure class="bettwenFlex">
+							<img src="/IMG/iconos/address.svg">
+							<figcaption>
+								<p><b>UBICACIÓN</b></p>
+								<p>Venezuela, Edo. Anzoátegui, Barcelona.</p>
+							</figcaption>
+						</figure>
+
+						<figure class="bettwenFlex">
+							<img src="/IMG/iconos/email.svg">
+							<figcaption>
+								<p><b>CORREO ELECTRÓNICO</b></p>
+								<p>hiconnection@gmail.com</p>
+							</figcaption>
+						</figure>
+					</div>
+					
+					<!-- <figure class="bettwenFlex">
+						<img src="/IMG/iconos/telephone.svg">
+						<figcaption>
+							<p><b>TELÉFONO</b></p>
+							<p>+58 426-5821865</p>
+						</figcaption>
+					</figure> -->
+				</div>
+			</div>
+		</div>
+
+		<div class="second-loader allScreen">
+			<section class="centerFlex">
+				<div id="bars">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<!-- <div class="load-1">
+					<div class="load-2 child">
+						<div class="load-3 child">
+							<div class="token"></div>
+						</div>
+					</div>
+				</div> -->
+			</section>
+		</div>
+	</section>
+
+	<!-- Inclusión del Pie de página ------------------------------------------------------------------------------------->
+	<%- include("../../templates/web/footer") %>
+	<!-- ----------------------------------------- ----------------------------------------------------------------------------------->
+</body>
+</html>

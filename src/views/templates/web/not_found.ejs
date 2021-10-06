@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript" src="/JS/librerias/web.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/CSS/librerias/global.css">
+	<link rel="stylesheet" type="text/css" href="/CSS/contenido/web/not_found_page.css">
+	<link rel="icon" type="image/gif" href="/IMG/logos/logo.png">
+
+	<title>Hi Connection - No Encontrado</title>
+</head>
+<body>
+
+	<div class="not-found-message allScreen centerFlex">
+		<div class="container">
+			<h1>404</h1>
+
+			<p>
+				La página que buscas en la dirección <br>
+				<i><%- url %></i><br>
+				no existe. Te recomendamos que presiones uno de los siguientes botones.
+			</p>
+
+			<div class="buttons-container aroundFlex">
+				<a href="/" class="redirect-button">
+					Página Principal
+				</a>
+				<br>
+				<a href="/login" class="redirect-button">
+					Inicia Sesión
+				</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

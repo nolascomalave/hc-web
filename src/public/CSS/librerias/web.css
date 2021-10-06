@@ -1,0 +1,407 @@
+.data-message {
+  width: 50%;
+  padding: 1.25em;
+  margin: auto;
+  font-size: 1.25vw;
+  text-align: center;
+  text-shadow: -0.05em -0.05em 0 #fafafa, 0.05em -0.05em 0 #fafafa, -0.05em 0.05em 0 #fafafa, 0.05em 0.05em 0 #fafafa, 0 0.05em 0 #fafafa, 0 -0.05em 0 #fafafa, 0.05em 0 0 #fafafa, -0.05em 0 0 #fafafa;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.25em black;
+  background-color: #fafafa;
+}
+.data-message p {
+  margin-bottom: 1em;
+  font-size: 1.1em;
+}
+.data-message img {
+  width: 20%;
+}
+
+.get-data-error {
+  color: #460a42;
+}
+
+.empty-data {
+  color: #0a4642;
+}
+
+#nav {
+  position: sticky;
+  bottom: auto;
+  padding: 0% 2em;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent);
+  transition: 500ms;
+  z-index: 10;
+  transform: scale(1);
+}
+#nav .home-link {
+  display: block;
+  width: 3%;
+}
+#nav .home-link img {
+  width: 100%;
+}
+#nav .options {
+  width: 100%;
+  font-size: 1.25vw;
+  padding: 0.5em;
+}
+#nav .options .header {
+  display: none;
+  padding: 1em;
+  padding-top: 0em;
+  font-size: 1.75vw;
+  color: white;
+}
+#nav .options .header .close {
+  font-size: 1.25vw;
+  color: #c8c8c8;
+  text-shadow: 0 0 0.25em black;
+  transition: 250ms;
+}
+#nav .options .header .close:hover {
+  color: #c86464;
+  text-shadow: 0 0 0.5em black;
+}
+#nav .options li {
+  list-style: none;
+  margin-right: 1em;
+}
+#nav .options li .option, #nav .options li .special {
+  display: block;
+  padding: 0.5em;
+  font-size: 1.25vw;
+  text-shadow: 0 0 0.25em black;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  transition: 250ms;
+}
+#nav .options li .option {
+  position: relative;
+  color: white;
+  border: none;
+}
+#nav .options li .option:before {
+  content: "";
+  position: absolute;
+  bottom: -0.3em;
+  left: 50%;
+  right: 50%;
+  height: 0.125em;
+  background: #00efe0;
+  transition: 250ms;
+}
+#nav .options li .option:hover {
+  color: #00efe0;
+  text-shadow: 0 0 0.5em black;
+}
+#nav .options li .option:hover:before {
+  right: 0%;
+  left: 0%;
+}
+#nav .options li .active {
+  color: #00efe0;
+  text-shadow: 0 0 0.5em black;
+}
+#nav .options li .active:before {
+  right: 0%;
+  left: 0%;
+}
+#nav .options li .special {
+  padding: 0.5em;
+  border: 0.1em solid #00efe0;
+  color: #00efe0;
+  border-radius: 0.25em;
+}
+#nav .options li .special:hover {
+  color: #0d0d0d;
+  text-shadow: none;
+  border-color: transparent;
+  background: #00efe0;
+}
+#nav .options li:last-child {
+  margin-right: 0%;
+}
+
+.dark-nav {
+  background: rgba(13, 13, 13, 0.95);
+}
+
+#menu-button {
+  display: none;
+  position: fixed;
+  top: 1vw;
+  right: 1vw;
+  font-size: 17pt;
+  padding: 0.25em 0.4em;
+  color: #00efe0;
+  border: 0.1em solid #00efe0;
+  border-radius: 0.25em;
+  background: none;
+  cursor: pointer;
+  transition: 250ms;
+  z-index: 10;
+}
+#menu-button:hover {
+  color: #0d0d0d;
+  box-shadow: 0 0 0.25em black;
+  background: #00efe0;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #131313;
+}
+#footer .contenedor {
+  background-image: linear-gradient(to right, rgba(0, 239, 224, 0.1) 20%, transparent);
+}
+#footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  grid-gap: 2em;
+  padding: 1em 2em;
+  color: #fafafa;
+  text-shadow: 0 0 0.25em black;
+}
+#footer .container ul {
+  padding: 0;
+}
+#footer .container ul p {
+  font-size: 1.35vw;
+  margin-bottom: 0.1em;
+}
+#footer .container ul li {
+  margin-top: 0.25em;
+  list-style: none;
+}
+#footer .socialNetwork {
+  width: 100%;
+  padding: 0.5em 37.5%;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.1);
+}
+#footer .socialNetwork .enlace {
+  margin-right: 1rem;
+  font-size: 1.44vw;
+  text-shadow: 0 0 0.25em black;
+}
+#footer .socialNetwork .enlace:hover {
+  text-decoration: none;
+  text-shadow: 0 0 0.5em black;
+}
+#footer .socialNetwork .enlace:last-child {
+  margin-right: 0;
+}
+#footer .enlace {
+  display: block;
+  color: #c8c8c8;
+  cursor: pointer;
+  transition: 250ms;
+}
+#footer .enlace:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  .data-message {
+    max-width: 600px;
+    width: 100%;
+    font-size: 12pt;
+  }
+  .data-message img {
+    width: 112px;
+  }
+
+  #nav .options {
+    font-size: 12pt;
+  }
+  #nav .options .header {
+    font-size: 15pt;
+  }
+  #nav .options .header .close {
+    font-size: 12pt;
+  }
+  #nav .options li .option, #nav .options li .special {
+    font-size: 12pt;
+  }
+
+  #footer {
+    font-size: 11pt;
+  }
+  #footer .container ul p {
+    font-size: 12pt;
+  }
+  #footer .socialNetwork .enlace {
+    font-size: 13pt;
+  }
+}
+@media screen and (max-width: 900px) {
+  #footer .container {
+    grid-template-columns: repeat(3, 3fr);
+  }
+}
+@media screen and (max-width: 760px) {
+  #menu-button {
+    display: initial;
+  }
+
+  #nav {
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 0%;
+    top: 0%;
+    padding: 0%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #nav .home-link {
+    display: none;
+  }
+  #nav #nav-list {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    padding: 1em 0%;
+    box-shadow: 0 0 1em black;
+    background: #262626;
+  }
+  #nav #nav-list .header {
+    display: flex;
+  }
+  #nav #nav-list .li-item {
+    width: 100%;
+    margin-bottom: 1em;
+    border-left: 0.25em solid white;
+  }
+  #nav #nav-list .li-item:hover {
+    border-color: #00efe0;
+  }
+  #nav #nav-list .option {
+    width: 100%;
+    padding: 0.25em 0.5em;
+    padding-left: 1em;
+    text-align: left;
+  }
+  #nav #nav-list .drop-options .drop-list {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    top: auto;
+    right: auto;
+    width: 100%;
+    padding-left: 2em;
+    border-radius: 0px;
+    background: none;
+    transform: none;
+  }
+  #nav #nav-list .drop-options .drop-list .drop-item {
+    border-radius: 0px;
+  }
+  #nav #nav-list .drop-options .drop-list .drop-item a, #nav #nav-list .drop-options .drop-list .drop-item button {
+    position: relative;
+    color: #f0f0f0;
+    border-radius: 0px;
+    border-left: 0.1em dashed #747474;
+    background: none;
+  }
+  #nav #nav-list .drop-options .drop-list .drop-item a:before, #nav #nav-list .drop-options .drop-list .drop-item button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 0.5em;
+    border-top: 0.1em dashed #747474;
+  }
+  #nav #nav-list .drop-options .drop-list .drop-item a:hover, #nav #nav-list .drop-options .drop-list .drop-item button:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  #nav #nav-list .option {
+    color: white;
+    text-shadow: none;
+  }
+  #nav #nav-list .option:before {
+    display: none;
+  }
+  #nav #nav-list .option:hover {
+    border-left-color: #00efe0;
+  }
+  #nav #nav-list .drop-options:hover .drop-button, #nav #nav-list .option:hover {
+    color: #00efe0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  #nav #nav-list .special-li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    border: none;
+  }
+  #nav #nav-list .special-li .special {
+    display: inline-block;
+    width: auto;
+    padding: 0.25em 0.5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .data-message {
+    width: 90%;
+  }
+
+  #footer .container {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+@media screen and (max-width: 300px) {
+  #footer .container {
+    grid-template-columns: 1fr;
+  }
+  #footer .container ul {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 250px) {
+  .data-message {
+    font-size: 6.375vw;
+  }
+  .data-message img {
+    width: 50%;
+  }
+
+  #nav .options {
+    font-size: 6.375vw;
+  }
+  #nav .options .header {
+    font-size: 7.437vw;
+  }
+  #nav .options .header .close {
+    font-size: 6.375vw;
+  }
+  #nav .options li .option, #nav .options li .special {
+    font-size: 6.375vw;
+  }
+
+  #menu-button {
+    font-size: 10vw;
+  }
+
+  #footer {
+    font-size: 5.84vw;
+  }
+  #footer .container ul p {
+    font-size: 6.375vw;
+  }
+  #footer .socialNetwork .enlace {
+    font-size: 6.375vw;
+  }
+}
+
+/*# sourceMappingURL=web.css.map */

@@ -1,0 +1,25 @@
+[
+	{
+		"id": "1232354dsdfsd65as765s",
+		"name": "ONLY PERSON",
+		"price": 20,
+		"denominator_price": "$",
+		"img": "/IMG/planes/netflix.svg",
+		"description":"El plan para los cara 'e vergas que solo quieren ver porno.",
+		"features": [
+			"3megas de Internet",
+			"Fino para los adictos a las pajas.",
+			"Se ve PornHub",
+			"No se le instala a las personas no binarias"
+		],
+		"creation": {
+			"date": "26/09/2021",
+			"user": "MALAVEN"
+		},
+		"update":{
+			"date": "26/09/2021",
+			"user": "MALAVEN"
+		},
+		"category": "BÁSICO"
+	}
+]

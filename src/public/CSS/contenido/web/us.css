@@ -1,0 +1,505 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+body {
+  font-size: 1.25vw;
+  background: #0d0d0d;
+}
+
+#portada {
+  background-size: 100%;
+  background-image: url("/IMG/super-antenna.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+#portada .filter-box {
+  position: absolute;
+  background-image: linear-gradient(to right, #fafafa 50%, transparent 50%);
+  z-index: 0;
+}
+#portada .contenedor {
+  padding: 3vw 0;
+  padding-bottom: 7vw;
+  background-image: linear-gradient(45deg, transparent 90%, rgba(121, 12, 134, 0.5) 10%);
+  z-index: 1;
+}
+#portada .contenedor .description {
+  width: 50%;
+  padding: 0 3em;
+}
+#portada .contenedor .description .title {
+  margin-bottom: 0.25em;
+  font-size: 4em;
+  line-height: 90%;
+  color: #790c86;
+  word-break: break-all;
+}
+#portada .contenedor .description p {
+  margin-bottom: 0.5em;
+}
+#portada .contenedor .description p:last-child {
+  margin-bottom: 0;
+}
+#portada .contenedor .aditional-text {
+  width: 60%;
+  margin: auto;
+  margin-top: 2em;
+}
+#portada .contenedor .aditional-text img {
+  position: absolute;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  width: 40%;
+  box-shadow: 0.25em 0.25em 0.5em black;
+}
+#portada .contenedor .aditional-text .texto {
+  width: 60%;
+  padding: 1.5em;
+  padding-left: 15%;
+  padding-bottom: 3em;
+  color: white;
+  box-shadow: 0.25em 0.25em 0.5em black;
+  background: #790c86;
+}
+#portada .contenedor .aditional-text .texto b {
+  margin-bottom: 0.25em;
+  font-size: 1.5em;
+}
+
+#mision-vision {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  margin: auto;
+}
+#mision-vision .valor {
+  padding: 3vw;
+  padding-right: 5vw;
+  color: white;
+  text-shadow: 0 0 0.25em black;
+  box-shadow: 0 0 0.5em black;
+  background: linear-gradient(to right, rgba(0, 239, 224, 0.75), rgba(0, 239, 224, 0.25));
+}
+#mision-vision .valor h1 {
+  margin-bottom: 0.25em;
+  font-size: 2.25em;
+}
+#mision-vision .valor p {
+  margin-bottom: 0.25em;
+  text-align: justify;
+}
+#mision-vision .valor p:last-child {
+  margin-bottom: 0;
+}
+#mision-vision .vision {
+  padding: 3vw;
+  padding-left: 5vw;
+  background: linear-gradient(to left, rgba(0, 239, 224, 0.75), rgba(0, 239, 224, 0.25));
+}
+#mision-vision .img-separator, #mision-vision .valor .img {
+  box-shadow: 0 0 0.5em black;
+  background-image: url("/IMG/radioenlaces.jpg");
+  background-position: right;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  transform: scale(1.15);
+}
+#mision-vision .valor:last-child .img {
+  background-image: url("/IMG/mision-vision2.png");
+  background-position: left;
+}
+
+#valores {
+  padding: 2em;
+  padding-top: 4em;
+  color: #323232;
+  background-color: #fafafa;
+  /*display: grid;
+  grid-template-columns: auto 40%; //480px cuando el ancho de la página esté en 1200px;
+
+  ul{
+  	padding: 6vw 0;
+  	box-shadow: inset 0 0 .25vw black;
+  	background: linear-gradient(to right, var.$purple, lighten(var.$purple, 15));
+
+  	li{
+  		display: grid;
+  		grid-template-columns: 4em auto;
+  		grid-auto-columns: dense;
+  		grid-gap: 1em;
+  		width: 90%;
+  		padding: 1em 2em;
+  		padding-left: .5em;
+  		padding-right: 2em;
+  		margin-bottom: 2em;
+  		float: left;
+  		list-style: none;
+  		border-top-right-radius: .25em;
+  		border-bottom-right-radius: .25em;
+  		box-shadow: 0 0 .25em black;
+  		background: linear-gradient(to right, rgb(235,235,235), white);
+
+  		.texto, .circle{
+  			display: flex;
+  			align-items: flex-start;
+  			justify-content: center;
+  		}
+
+  		.circle{
+  			grid-area: 1/1 / 2/2;
+
+  			div{
+  				padding: 50%;
+  				border-radius: 50%;
+  				box-shadow: inset 0 0 .5em var.$darkPurple;
+  				background: var.$purple;
+  			}
+  		}
+
+  		.texto{
+  			grid-area: 1/2 / 2/3;
+
+  			b{
+  				margin-bottom: .5em;
+  				font-size: 1.1em;
+  				color: var.$purple;
+  			}
+  		}
+
+  		&:nth-child(even){
+  			grid-template-columns: auto 4em;
+  			float: right;
+  			border-top-right-radius: 0em;
+  			border-bottom-right-radius: 0em;
+  			border-top-left-radius: .25em;
+  			border-bottom-left-radius: .25em;
+  			background: linear-gradient(to right, white, rgb(235,235,235));
+
+  			.circle{
+  				grid-area: 1/2 / 2/3;
+  			}
+
+  			.texto{
+  				grid-area: 1/1 / 2/2;
+  			}
+  		}
+
+  		&:last-child{
+  			margin-bottom: 0;
+  		}
+  	}
+  }
+
+  .description{
+  	padding: 6vw;
+  	box-shadow: 0 0 .25em black;
+  	background: linear-gradient(to right, rgb(235,235,235), white);
+
+  	h1{
+  		margin-bottom: .25em;
+  		font-size: 2.5em;
+  		color: var.$purple;
+  	}
+  }*/
+}
+#valores .description {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 3em;
+  text-align: center;
+}
+#valores .description h1 {
+  margin-bottom: 0.25em;
+  font-size: 2.25em;
+  color: #790c86;
+}
+#valores ul {
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-gap: 2em;
+}
+#valores ul li {
+  padding: 1.25em;
+  color: #5a5a5a;
+  list-style: none;
+  border-radius: 0.25em;
+  border: 0.1em solid #fafafa;
+  box-shadow: 0 0.25em 0.5em #c8c8c8, inset 0 0 0.25em rgba(121, 12, 134, 0.25);
+  background: rgba(121, 12, 134, 0.25);
+}
+#valores ul li .title {
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  color: #790c86;
+}
+
+#objetivos {
+  align-items: flex-start;
+  padding: 4vw 10%;
+  margin: auto;
+  background: #0d0d0d;
+}
+#objetivos .global-title {
+  position: relative;
+  width: 40%;
+  padding: 0.5em;
+  font-size: 2.25em;
+  color: #c8c8c8;
+  border-left: 0.1em solid transparent;
+  text-shadow: 0 0 0.125em black;
+}
+#objetivos .global-title:before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  left: 0%;
+  width: 0.1em;
+  border-radius: 0.1em;
+  background: #00efe0;
+}
+#objetivos ul {
+  padding: 1em 2em;
+  border-left: 0.1em solid transparent;
+}
+#objetivos ul li {
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 1em;
+}
+#objetivos ul li .title {
+  width: 22.7483314154;
+}
+#objetivos ul li .title .count {
+  font-size: 0.8em;
+  color: #00efe0;
+  text-shadow: 0 0 0.25em black;
+}
+#objetivos ul li .title .text {
+  margin-top: 0.25em;
+  color: white;
+}
+#objetivos ul li .description {
+  width: 77.2516685846%;
+  padding-left: 1em;
+  color: #c8c8c8;
+}
+#objetivos ul li:before {
+  top: 0.2em;
+  left: -2.2em;
+  padding: 0.25em;
+  border-radius: 50%;
+  background: #00efe0;
+}
+#objetivos ul:before {
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  width: 0.1em;
+  border-radius: 1em;
+  background: #c8c8c8;
+}
+#objetivos ul:last-child {
+  margin-bottom: 0;
+}
+#objetivos ul:before, #objetivos ul li:before {
+  content: "";
+  position: absolute;
+  box-shadow: 0 0 0.25em black;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 12pt;
+  }
+
+  #portada .contenedor .aditional-text {
+    width: 720px;
+    max-width: 100%;
+  }
+
+  #valores .description {
+    max-width: 795.2px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #valores ul {
+    grid-template-columns: repeat(3, 3fr);
+  }
+}
+@media screen and (max-width: 800px) {
+  #mision-vision {
+    display: block;
+  }
+  #mision-vision .img-separator {
+    display: none;
+  }
+  #mision-vision .valor {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    padding: 0%;
+  }
+  #mision-vision .valor .description {
+    padding: 2em;
+  }
+  #mision-vision .valor .img {
+    display: block;
+    transform: none;
+  }
+  #objetivos {
+    flex-wrap: wrap;
+  }
+  #objetivos .global-title {
+    width: 100%;
+    padding-bottom: 0.3em;
+    margin-bottom: 1.5em;
+    border: none;
+    border-bottom: 0.1em solid transparent;
+    text-align: center;
+  }
+  #objetivos .global-title:before {
+    top: auto;
+    right: 35%;
+    bottom: 0%;
+    left: 35%;
+    width: auto;
+    height: 0.1em;
+    background: #00efe0;
+  }
+  #objetivos ul {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  #portada .contenedor {
+    padding-bottom: 8.5vw;
+  }
+  #portada .contenedor .aditional-text {
+    justify-content: center;
+  }
+  #portada .contenedor .aditional-text img {
+    position: initial;
+    width: 50%;
+    transform: translateX(1em);
+  }
+  #portada .contenedor .aditional-text .texto {
+    width: 50%;
+    padding: 2em;
+    padding-left: 3em;
+    box-shadow: none;
+  }
+
+  #valores {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  #valores ul {
+    grid-area: 2/1/3/2;
+    padding: 1em 0;
+  }
+  #valores ul li {
+    margin-bottom: 1em;
+  }
+  #valores ul li:last-child {
+    margin-bottom: 0;
+  }
+  #valores .description {
+    grid-area: 1/1/2/2;
+  }
+}
+@media screen and (max-width: 650px) {
+  #valores ul {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  #portada .filter-box {
+    background: rgba(250, 250, 250, 0.85);
+  }
+  #portada .contenedor {
+    padding-bottom: 0;
+    z-index: 0;
+  }
+  #portada .contenedor .description {
+    width: 100%;
+  }
+  #portada .contenedor .aditional-text img {
+    display: none;
+  }
+  #portada .contenedor .aditional-text .texto {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #mision-vision .valor {
+    display: flex;
+    justify-content: flex-start;
+    background: linear-gradient(to right, rgba(0, 239, 224, 0.5), transparent);
+  }
+  #mision-vision .valor .description {
+    width: 100%;
+    max-width: 375px;
+  }
+  #mision-vision .valor .img {
+    display: none;
+  }
+  #mision-vision .vision {
+    justify-content: flex-end;
+    background: linear-gradient(to right, transparent, rgba(0, 239, 224, 0.5));
+  }
+
+  #objetivos ul li {
+    display: block;
+    margin-bottom: 2em;
+  }
+  #objetivos ul li .title {
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+  #objetivos ul li .description {
+    width: 100%;
+    padding: 0%;
+  }
+  #objetivos ul li:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  #portada .contenedor {
+    padding: 0em;
+  }
+  #portada .contenedor .description {
+    padding: 2em;
+  }
+
+  #valores ul {
+    grid-template-columns: 1fr;
+  }
+
+  /*#valores ul li{
+  	display: block;
+  	padding: 1em;
+
+  	.circle{
+  		display: none;
+  	}
+
+  	.texto{
+  		padding: 0;
+  	}
+  }*/
+}
+@media screen and (max-width: 350px) {
+  #portada .contenedor .description .title {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 250px) {
+  body {
+    font-size: 6.38vw;
+  }
+}
+
+/*# sourceMappingURL=us.css.map */

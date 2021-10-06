@@ -1,0 +1,42 @@
+[
+	{
+		"id_pregunta":1,
+		"titulo": "¿Cuál es la velocidad más alta que ofrecen de internet?",
+		"respuesta": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"fecha_registro": "20-06-2021",
+		"fecha_edicion": "20-07-2021",
+		"creador": "Nolasco Malavé",
+		"editor": null,
+		"visitas":0
+	},
+	{
+		"id_pregunta":2,
+		"titulo": "¿Por qué somos los mejores?",
+		"respuesta": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"fecha_registro": "20-06-2021",
+		"fecha_edicion": "20-07-2021",
+		"creador": "admin",
+		"editor": "Admin",
+		"visitas":0
+	},
+	{
+		"id_pregunta":3,
+		"titulo": "¿Por qué los trabajadores de la empresa son tan bajos?",
+		"respuesta": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"fecha_registro": "20-06-2021",
+		"fecha_edicion": "20-07-2021",
+		"creador": "Nolasco Malavé",
+		"editor": null,
+		"visitas":0
+	},
+	{
+		"id_pregunta":4,
+		"titulo": "¿Por qué no me ponen internet gratis?",
+		"respuesta": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"fecha_registro": "20-06-2021",
+		"fecha_edicion": "20-07-2021",
+		"creador": "admin",
+		"editor": "Admin",
+		"visitas":0
+	}
+]

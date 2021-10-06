@@ -1,0 +1,215 @@
+<div id="data-section">
+	<div class="search-container bettwenFlex">
+		<div class="input-group flex-nowrap">
+			<span class="input-group-text" >
+				<i class="fa fa-search"></i>
+			</span>
+			<input type="text" id="search" class="form-control" placeholder="Buscar">
+		</div>
+
+		<button type="button" id="nuevo" class="button-new">
+			<i class="fa fa-plus"></i>
+			NUEVO PLAN
+		</button>
+	</div>
+
+	<div class="data-items">
+		<% if(data.plans.length>0){ %>
+			<% data.plans.forEach((plan)=>{ %>
+				<div class="item">
+					<div class="container" style="border-color: teal">
+						<div class="head bettwenFlex">
+							<b>
+								<%- plan.complete_category.name %>
+							</b>
+							<div class="dropdown relative">
+								<button class="options btn dropdown-toggle centerFlex" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="fa fa-ellipsis-v"></i>
+								</button>
+
+								<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+									<li>
+										<button type="button" class="watch dropdown-item">
+											<i class="fa fa-eye"></i>
+											Ver
+										</button>
+									</li>
+									<li>
+										<button type="button" class="edit dropdown-item">
+											<i class="fa fa-edit"></i>
+											Editar
+										</button>
+									</li>
+									<li>
+										<button type="button" class="del dropdown-item">
+											<i class="fa fa-trash-alt"></i>
+											Eliminar
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="title centerFlex" style="color: teal;">
+							<b><%- plan.name %></b>
+						</div>
+
+						<div class="texto">
+							<p class="precio"><%- plan.formated_price %> <b><%- plan.denominator_price %></b></p>
+							<p>Características <b>(<%- plan.features.length %>)</b></p>
+						</div>
+
+						<div class="bettwenFlex">
+							<div class="img">
+								<div style="background-image: url('/server-files/content/planes/<%- plan.img %>');"></div>
+							</div>
+
+							<div class="info">
+								<p><i class="fa fa-user-edit"></i> MALAVEN</p>
+								<p><i class="fa fa-calendar-check"></i> 20/04/2021</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			<% }); %>
+		<% } %>
+	</div>
+</div>
+
+<div id="form-section">
+	<div class="header bettwenFlex">
+		<div class="type-form">
+			<i class="fa fa-plus"></i> <b>NUEVO PLAN</b>
+		</div>
+
+		<button id="back-form" type="button" title="Volver">
+			<i class="fa fa-arrow-left"></i>
+		</button>
+	</div>
+	<div class="title-editer centerFlex">
+		<div>
+			<b class="type-item">PREMIUM:</b> <span class="title-item">FULL GIGAS</span>
+		</div>
+	</div>
+
+	<form id="proccess-form" enctype="multipart/form-data">
+		<div class="row">
+			<div class="col-12 startFlex">
+				<div class="form-check form-switch centerFlex">
+					<input type="checkbox" id="registred_type" name="registred_type" class="form-check-input"
+						<% if(data.categorias.length==0){ %>
+							checked=''
+						<% } %>
+					>
+					
+					<label for="registred_type">Tipo de Plan no registrado</label>
+				</div>
+			</div>
+
+			<div class="col-lg-4 mb-3">
+				<label for="type" class="form-label"><b>Categoria</b> <span class="obligatory">*</span></label>
+				<div class="input-group">
+					<span class="input-group-text">
+						<i class="fa fa-stream"></i>
+					</span>
+					<select id="category" name="category" class="form-select" required="">
+						<option>---</option>
+						<% if(data.categorias.length>0){ %>
+							<% data.categorias.forEach((cat)=>{ %>
+								<option value="<%- cat.name %>">
+									<%- cat.name %>
+								</option>
+							<% }); %>
+						<% } %>
+					</select>
+					<input type="text" id="new_category" name="new_category" class="form-control hide" placeholder="Nueva Categoría">
+				</div>
+				<p id="category-error" class="error"></p>
+			</div>
+
+			<div class="col-lg-4 mb-3">
+				<label for="name" class="form-label"><b>Nombre</b> <span class="obligatory">*</span></label>
+				<div class="input-group">
+					<span class="input-group-text">
+						<i class="fa fa-box"></i>
+					</span>
+					<input type="text" id="name" name="name" class="form-control" placeholder="Título" required="">
+				</div>
+				<p id="name-error" class="error"></p>
+			</div>
+
+			<div class="col-sm-4 mb-3">
+				<label for="price" class="form-label"><b>Precio</b> <span class="obligatory">*</span></label>
+				<div class="input-group">
+					<span class="input-group-text">
+						<i class="fa fa-dollar-sign"></i>
+					</span>
+					<input type="text" id="price" name="price" class="form-control right-text" placeholder="$0,00" required="">
+				</div>
+				<p id="price-error" class="error"></p>
+			</div>
+
+			<!-- <div class="col-12 startFlex">
+				<div class="form-check form-switch centerFlex">
+					<input type="checkbox" id="edit_img" name="edit_img" class="form-check-input">
+					<label for="edit_img">Cambiar Imágen</label>
+				</div>
+			</div> -->
+
+			<div class="col-sm-4 mb-3">
+				<label class="form-label"><b>Imágen</b> <span class="obligatory">*</span></label>
+				<div>
+					<div id="img-content" class="input-file">
+						<input type="file" id="img" name="img" class="file-button" required="">
+						<label for="img">
+							<div class="input-file-name">
+								Elige un archivoadf asgsdfgsdfg sdfgsdfg sdfgsdfgsdfgsd sdfg
+							</div>
+							<div class="upload-icon">
+								<i class="fa fa-upload"></i>
+							</div>
+						</label>
+					</div>
+				</div>
+				<div id="img-error" class="file-text"></div>
+			</div>
+
+			<div class="col-12 mb-3">
+				<label for="description" class="form-label"><b>Descripción</b> <span class="obligatory">*</span></label>
+				<div class="input-group">
+					<textarea id="description" name="description" class="form-control" placeholder="Descripción" required=""></textarea>
+				</div>
+				<p id="description-error" class="error"></p>
+			</div>
+		</div>
+
+		<fieldset>
+			<legend class="col-12">Características</legend>
+
+			<div class="row">
+				<div class="col-lg-6 mb-3 caracteristica">
+					<label for="price" class="form-label"><b>Característica</b> <span class="obligatory">*</span></label>
+					<div class="input-group">
+						<span class="input-group-text">
+							<b>1</b>
+						</span>
+						<input type="text" class="form-control" placeholder="Característica" required="">
+					</div>
+					<p class="error"></p>
+				</div>
+			</div>
+
+			<div class="endFlex">
+				<button type="button" id="add-caracteristica" class="add-caracteristica" title="Agregar">
+					<i class="fa fa-plus"></i> Agregar Característica
+				</button>
+			</div>
+		</fieldset>
+
+		<center style="margin-top: 1em;">
+			<button type="submit">
+				<b>REGISTRAR</b>
+			</button>
+		</center>
+	</form>
+</div>

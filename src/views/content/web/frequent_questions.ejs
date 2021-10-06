@@ -1,0 +1,257 @@
+<section id="portada">
+	<div class="container bettwenFlex">
+		<div class="description">
+			<h1>
+				Preguntas Frecuentes
+			</h1>
+
+			<p>
+				Si tienes alguna duda sobre los servicios que ofrecemos, puedes buscar la respuesta aquí.
+			</p>
+
+			<p>
+				Si no encuentras la pregunta, intenta con el buscador, él las encontrará, y si no lo hace, entonces haznos saber tus dudas a través de nuestro <a href="/#contacto">Formulario de Contacto</a>.
+			</p>
+		</div>
+
+		<form id="search-form" class="search-form" method="post" action="/preguntas-frecuentes/busqueda/">
+			<div class="centerFlex">
+				<input type="text" name="search" id="search" required minlength="5" maxlength="250" placeholder="Buscar">
+				<button type="submit" title="Buscar">
+					<i class="fa fa-arrow-right"></i>
+				</button>
+			</div>
+			<p>Escribe la pregunta que buscas para que la encuentres más rápido.</p>
+		</form>
+	</div>
+</section>
+
+<section id="preguntas-section">
+	<div class="title centerFlex">
+		<% if(data.busqueda==false){ %>
+			<b>Todas las Preguntas</b>
+		<% }else{ %>
+			<b>Resultados de la búsqueda "<span> <%- data.search %> </span>":</b>
+		<% } %>
+	</div>
+
+	<div class="preguntas">
+		<!-- <div id="quest1" class="pregunta opened">
+			<button class="controll open" title="Ver Respuesta" onclick="openQuestion($('#quest1'))">
+				<i class="fa fa-eye"></i>
+			</button>
+
+			<button class="controll close" title="Ocultar Respuesta" onclick="closeQuestion($('#quest1'))">
+				<i class="fa fa-times"></i>
+			</button>
+
+			<a href="/preguntas-frecuentes/pregunta1" class="question" title="Pregunta">
+				¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?
+			</a>
+
+			<div class="container centerFlex">
+				<div class="description">
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+
+				<div class="info centerFlex">
+					<div class="publicador">
+						<b>Publicado por:</b> Autor
+					</div>
+					<div class="date">
+						<b>Publicado el:</b>
+						<p class="date">20 de Agosto de 2021</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="quest2" class="pregunta">
+
+			<a href="/preguntas-frecuentes/pregunta1" class="question" title="Pregunta">
+				¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?
+			</a>
+
+			<button class="controll open" title="Ver Respuesta" onclick="openQuestion($('#quest2'))">
+				<i class="fa fa-eye"></i>
+			</button>
+
+			<button class="controll close" title="Ocultar Respuesta" onclick="closeQuestion($('#quest2'))">
+				<i class="fa fa-times"></i>
+			</button>
+
+			<div class="container centerFlex">
+				<div class="description">
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+
+				<div class="info centerFlex">
+					<div class="publicador">
+						<b>Publicado por:</b> Autor
+					</div>
+					<div class="date">
+						<b>Publicado el:</b>
+						<p class="date">20 de Agosto de 2021</p>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<% if(data.preguntas.length>0){ %>
+		<% let title='titulo'; %>
+		<% if(data.busqueda==true){ %>
+			<% title='pregunta'; %>
+		<% }%>
+			<% data.preguntas.forEach(quest =>{ %>
+				<div id="pregunta-<%- quest.id_pregunta %>" class="pregunta">
+					<button class="controll open" title="Ver Respuesta">
+						<i class="fa fa-eye"></i>
+					</button>
+
+					<button class="controll close" title="Ocultar Respuesta">
+						<i class="fa fa-times"></i>
+					</button>
+
+					<div class="question" title="<%- eval('quest.'+title) %>">
+						<%- quest.titulo %>
+					</div>
+
+					<div class="container centerFlex">
+						<div class="description">
+							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%- quest.respuesta %>
+						</div>
+
+						<div class="info centerFlex">
+							<div class="publicador">
+								<b>Publicado por:</b>&nbsp;
+								<% if(quest.editor==null) { %>
+									<%- quest.creador %>
+								<% }else{ %>
+									<%- quest.editor %>
+								<% } %>
+							</div>
+							<div class="date">
+								<b>Publicado el:</b>
+								<p class="date"><%- quest.fecha_registro %></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			<% }); %>
+		<% }else if(data.busqueda==false){ %>
+			<div class="not-data">
+				¡No hay preguntas registradas actualmente!
+			</div>
+		<% }else{ %>
+			<div class="not-found">
+				¡No se encontró resultado alguno de la búsqueda realizada!
+			</div>
+		<% } %>
+
+		<!-- <div class="pregunta">
+			<a href="/preguntas-frecuentes/pregunta1" class="question" title="Pregunta">
+				¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?
+			</a>
+
+			<div class="centerFlex">
+				<div class="description">
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+
+				<div class="info centerFlex">
+					<div>
+						<p>Publicado el:</p>
+						<p class="date">20 de Agosto de 2021</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pregunta">
+			<a href="/preguntas-frecuentes/pregunta1" class="question" title="Pregunta">
+				¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?
+			</a>
+
+			<div class="centerFlex">
+				<div class="description">
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+
+				<div class="info centerFlex">
+					<div>
+						<p>Publicado el:</p>
+						<p class="date">20 de Agosto de 2021</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pregunta">
+			<a href="/preguntas-frecuentes/pregunta1" class="question" title="Pregunta">
+				¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?
+			</a>
+
+			<div class="centerFlex">
+				<div class="description">
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+
+				<div class="info centerFlex">
+					<div>
+						<p>Publicado el:</p>
+						<p class="date">20 de Agosto de 2021</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pregunta">
+			<a href="/preguntas-frecuentes/pregunta1" class="question" title="Pregunta">
+				¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?¿Aquí debe definirse la pregunta?
+			</a>
+
+			<div class="centerFlex">
+				<div class="description">
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+
+				<div class="info centerFlex">
+					<div>
+						<p>Publicado el:</p>
+						<p class="date">20 de Agosto de 2021</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+</section>

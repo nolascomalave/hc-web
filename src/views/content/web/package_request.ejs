@@ -1,0 +1,229 @@
+<% if(('plan' in data)==true && data.plan!=null){ %>
+	<section id='portada'>
+		<div class="solicite-plan-section centerFlex relative">
+			<form id="solicite-plan-form" class="relative">
+				<div class="centerFlex">
+					<div class="float-label">
+						<input type="text" id="name">
+						<label for="name" class="inactive">Nombre <span class="obligatory">*</span></label>
+						<div class="borde">
+							<div></div>
+						</div>
+						<p id="name-error" class="error"></p>
+					</div>
+					<div class="float-label">
+						<input type="text" id="middle-name">
+						<label for="middle-name" class="inactive">Apellido <span class="obligatory">*</span></label>
+						<div class="borde">
+							<div></div>
+						</div>
+						<p id="middle-name-error" class="error"></p>
+					</div>
+				</div>
+
+				<div class="startFlex">
+					<div class="float-label type-doc-content">
+						<select id="type-doc">
+							<optgroup label="Cédula de Identidad">
+								<option value="VC" selected="">V (Cédula)</option>
+								<option value="EC">E (Cédula)</option>
+							</optgroup>
+							<optgroup label="RIF">
+								<!-- <option value="VR">V (RIF)</option>
+								<option value="ER">E (RIF)</option> -->
+								<option value="P">P (RIF)</option>
+								<option value="G">G (RIF)</option>
+								<option value="J">J (RIF)</option>
+							</optgroup>
+						</select>
+						<label for="type-doc" class="active"><span class="type-of">Tipo de</span> Documento <span class="type-of">de identidad</span> <span class="obligatory">*</span></label>
+						<div class="borde">
+							<div></div>
+						</div>
+						<p id="type-doc-error" class="error"></p>
+					</div>
+
+					<div class="float-label doc-content">
+						<input type="text" id="doc">
+						<label for="doc" class="inactive">Documento de Identidad <span class="obligatory">*</span></label>
+						<div class="borde">
+							<div></div>
+						</div>
+						<p id="doc-error" class="error"></p>
+					</div>
+				</div>
+
+				<div class="centerFlex">
+					<div class="float-label">
+						<input type="email" id="email">
+						<label for="email" class="inactive">Correo Electrónico <span class="obligatory">*</span></label>
+						<div class="borde">
+							<div></div>
+						</div>
+						<p id="email-error" class="error"></p>
+					</div>
+
+					<div class="float-label">
+						<input type="tlf" id="tlf">
+						<label for="tlf" class="inactive">Número telefónico <span class="obligatory">*</span></label>
+						<div class="borde">
+							<div></div>
+						</div>
+						<p id="telefono-error" class="error"></p>
+					</div>
+				</div>
+
+				<div class="float-label">
+					<input type="text" id="address">
+					<label for="address" class="inactive">Direción <span class="obligatory">*</span></label>
+					<div class="borde">
+						<div></div>
+					</div>
+					<p id="address-error" class="error"></p>
+				</div>
+
+				<div class="float-label">
+					<textarea id="message"></textarea>
+					<label for="message" class="inactive">Mensaje</label>
+					<div class="borde">
+						<div></div>
+					</div>
+					<p id="message-error" class="error"></p>
+				</div>
+
+				<div class="endFlex">
+					<button id="package-send" type="submit" value="<%- data.plan.id %>">
+						Solicitar Plan
+					</button>
+				</div>
+			</form>
+
+			<div class="second-loader allScreen">
+				<section class="centerFlex">
+					<div id="bars">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<div class="description centerFlex relative">
+			<div class="desenfoque allScreen"></div>
+			<div class="container">
+				<h1>
+					Solicite el plan
+					<span class="purple-hi">
+						<%- data.plan.name %>
+					</span> por <span class="purple-hi"><%- data.plan.denominator_price+data.plan.price %></span>
+				</h1>
+
+				<p class="texto">
+					<%- data.plan.description %>
+				</p>
+
+				<ul>
+					<% data.plan.features.forEach(el =>{ %>
+						<li>
+							<%- el %>
+						</li>
+					<% }); %>
+				</ul>
+			</div>
+		</div>
+	</section>
+<% }else if('plan' in data){ %>
+	<section id='portada2'>
+		<h1>El plan solicitado no lo hemos podido encontrar en nuestra base de datos.</h1>
+		<center>
+			<img src="/IMG/iconos/not-found.svg">
+		</center>
+	</section>
+	<!--<img src="/IMG/waves/dark-border.svg">-->
+<% } %>
+
+<section id="more-planes" class="relative">
+	<div class="description">
+		<h1 class="relative">
+			Todos nuestros planes
+		</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+		</p>
+	</div>
+
+	<% if(data.planes.errno){ %>
+		<div class="data-message get-data-error">
+			<p>¡Opps! Ha ocurrido un error al obtener los datos.</p>
+			<center>
+				<img src="/IMG/iconos/not-found.svg">
+			</center>
+		</div>
+	<% }else if(data.planes.length>0){ %>
+		<div class="planes">
+			<% data.planes.forEach(el =>{ %>
+				<div class="plan">
+					<!--<div class="type">
+						<b>PREMIUM</b>
+					</div>-->
+					<div class="contenido">
+						<div class="title">
+							<b>
+								<p class="price"><%- el.denominator_price+el.price %></p>
+								<p><%- el.name %></p>
+							</b>
+						</div>
+						<ul>
+							<% el.features.forEach( feature =>{ %>
+								<li><%- feature %></li>
+							<% }); %>
+						</ul>
+					</div>
+
+					<% if(data.plan!=null && el.id===data.plan.id){ %>
+						<a href="#portada" class="solicite-button">
+					<% }else{ %>
+						<a href="/planes/<%- el.id %>" class="solicite-button">
+					<% } %>
+					
+						Solicitar
+					</a>
+				</div>
+			<% }); %>
+		</div>
+
+		<!-- <div class="plan">
+			<div class="type">
+				<b>PREMIUM</b>
+			</div>
+			<div class="contenido">
+				<div class="title">
+					<b>
+						<p class="price">30$</p>
+						<p>TÍTULO</p>
+					</b>
+				</div>
+				<ul>
+					<li>Característica</li>
+					<li>Característica</li>
+					<li>Característica</li>
+					<li>Característica</li>
+					<li>Característica</li>
+				</ul>
+			</div>
+			<a href="/planes/plan" class="solicite-button">
+				Solicitar
+			</a>
+		</div> -->
+	<% }else{ %>
+		<div class="data-message empty-data">
+			<p>Por ahora no hay planes disponibles.</p>
+			<center>
+				<img src="/IMG/iconos/empty-data.svg">
+			</center>
+		</div>
+	<% } %>
+</section>

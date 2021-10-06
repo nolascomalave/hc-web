@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript" src="/JS/librerias/JQuery/jquery.js"></script>
+	<script type="text/javascript" src="/JS/librerias/global_class.js"></script>
+	<script type="text/javascript" src="/JS/librerias/global_functions.js"></script>
+	<script type="text/javascript" src="/JS/librerias/web.js"></script>
+	<script type="text/javascript" src="/JS/contenido/web/<%- title_resources%>.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/CSS/librerias/fontawesome/styles/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/CSS/librerias/global.css">
+	<link rel="stylesheet" type="text/css" href="/CSS/librerias/web.css">
+	<link rel="stylesheet" type="text/css" href="/CSS/contenido/web/<%- title_resources%>.css">
+	<link rel="icon" type="image/gif" href="/IMG/logos/logo.png">
+
+	<title>Hi Connection - <%- title_page %></title>
+</head>
+<body>
+
+	<!-- Inclusión del preloader de la página ---------------------------------------------------------------------------------------->
+	<%- include("./loader") %>
+	<!-- ----------------------------------------- ----------------------------------------------------------------------------------->
+
+	<!-- Inclusión de la plantilla de navegación ------------------------------------------------------------------------------------->
+	<%- include("./nav", {usuario, path}) %>
+	<!-- ----------------------------------------- ----------------------------------------------------------------------------------->
